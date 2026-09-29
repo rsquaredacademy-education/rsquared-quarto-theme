@@ -14,6 +14,7 @@ Reusable Quarto book template for Rsquared Academy ebooks. Extracted from the [b
 8. Port legacy redirects into root `netlify.toml`; set `RULE_COUNT` if `test-redirects.sh` needs it.
 9. Add repo secrets `NETLIFY_SITE_ID` + `NETLIFY_AUTH_TOKEN`; in Netlify UI set **Build status → Stopped builds** (Actions pushes the artifact via API).
 10. Fix CI-discovered issues in the book: install other missing runner packages (`bsdmainutils` precedent), bot-blocked/dead external links, Libertinus font fallback in PDF.
+11. No action needed for `sitemap.xml` — `scripts/make-sitemap.sh` generates it from staged pages every deploy (Quarto's `sitemap: true` is kept but unreliable for books).
 
 ## Pinned versions
 
