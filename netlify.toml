@@ -1,0 +1,15 @@
+# Redirect template: one [[redirects]] block per legacy Bookdown short URL.
+# The `to` targets must match canonical .qmd basenames (filename == slug).
+# scripts/test-redirects.sh asserts every target exists in staged docs/.
+
+[[redirects]]
+  from = "/preface.html"
+  to = "/index.html"
+  status = 301
+  force = true
+
+# [[redirects]]
+#   from = "/<legacy-short>.html"
+#   to = "https://__SUBDOMAIN__.rsquaredacademy.com/<canonical-slug>.html"
+#   status = 301
+#   force = true

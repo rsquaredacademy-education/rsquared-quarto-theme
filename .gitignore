@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+roadmap/
+cline/
+docs/
+spike/.quarto/
+spike/_book/
+
+/.quarto/
+*.quarto_ipynb

@@ -1,0 +1,53 @@
+project:
+  type: book
+  output-dir: docs
+  pre-render: "Rscript scripts/reset-fixture.R"
+  resources:
+    - "netlify.toml"
+    - "404.html"
+    - "robots.txt"
+
+quarto-required: ">=1.6.0"
+
+sitemap: true
+
+book:
+  title: "__BOOK_TITLE__"
+  author: "__AUTHOR__"
+  date: last-modified
+  chapters:
+    - index.qmd
+    # - <chapter-slug>.qmd   # one .qmd per chapter; filename == output slug
+
+website:
+  site-url: https://__SUBDOMAIN__.rsquaredacademy.com
+  title: "__BOOK_TITLE__"
+  description: "__ONE_LINE_DESCRIPTION__"
+  open-graph: true
+  twitter-card: true
+  navbar:
+    right:
+      - text: "GitHub"
+        href: https://github.com/rsquaredacademy-education/__REPO__/
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    search: true
+    code-overflow: wrap
+  pdf:
+    documentclass: scrreprt
+    papersize: us-letter
+    pdf-engine: typst
+    keep-typ: false
+    code-overflow: wrap
+    mainfont: "Libertinus Serif"
+    monofont: "DejaVu Sans Mono"
+    toc: true
+    number-sections: true
+  epub:
+    toc-depth: 2
+    epub-chapter-level: 1
+    cover-image: img/__COVER__.png
